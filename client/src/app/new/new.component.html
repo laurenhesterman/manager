@@ -1,0 +1,17 @@
+<h1>New Product</h1>
+<form (submit)="create()">
+ 
+  <!-- <p> {{ newProduct | json }} </p> -->
+  Product Name :<input type="text" name="title" [(ngModel)]="product.title" />
+  Price:<input type="text" name="price" [(ngModel)]="product.price" />
+  Image:<input type="text" name="image" [(ngModel)]="product.image" />
+  <button type="submit" value="Add Product" >Submit Product</button>
+</form>
+
+<div *ngIf="errors" >
+  
+  
+     {{ errors.message | json }} 
+      
+
+</div>

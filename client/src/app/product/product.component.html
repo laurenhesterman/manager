@@ -1,0 +1,14 @@
+<h1>Product List</h1>
+<p *ngFor="let each of products"> 
+        Item:{{ each.title }}<br>
+        Price: ${{ each.price }}<br>
+        <img [src]="[each.image]" ><br>
+        <button (click)="deleteThis(each._id)">Delete This Item</button>
+         <!-- <button (click)="updateThis(each)">Edit This Item</button>  -->
+         <a [routerLink]="['/products','edit', each._id]"> Edit This Item</a>
+        <!-- <br> --> 
+</p>
+
+
+
+

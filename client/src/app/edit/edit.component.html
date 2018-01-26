@@ -1,0 +1,17 @@
+<h1>Edit Product</h1>
+<form (submit)="edit(new_product._id)">
+ 
+  <!-- <p> {{ product | json }} </p> -->
+  Product Name :<input type="text" name="title" [(ngModel)]="new_product.title" />
+  Price:<input type="text" name="price" [(ngModel)]="new_product.price" />
+  Image:<input type="text" name="image" [(ngModel)]="new_product.image" />
+  <button type="submit" value="Add Product" >Submit Product</button>
+</form>
+
+<div *ngIf="errors" >
+  
+  
+     {{ errors.message | json }} 
+      
+
+</div>
